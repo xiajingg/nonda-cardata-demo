@@ -1,0 +1,3 @@
+lombok包
+@Data注解 自动get set tostring
+idea 需要下载lombok plugins

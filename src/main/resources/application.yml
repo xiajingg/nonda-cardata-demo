@@ -1,0 +1,53 @@
+server:
+  port: 8082
+girl:
+  cupSize: B
+
+
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: xj663812
+      url: jdbc:mysql://localhost:3306/cardata_collector?characterEncoding=utf-8&useSSL=false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#    dialect: org.hibernate.dialect.MySQL5Dialect 新版本方言如下 不然报DDL错误
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+
+#  data:
+#    mongodb:
+#     uri: mongodb://10.0.0.99:27017
+#     database: cardata
+
+
+
+
+
+#      uri: mongodb://ds011480-a0.ldb79.fleet.mlab.com:11480
+#      database: parse-app-dev
+#      authentication-database: admin
+#      host: 10.0.0.99
+#      port: 11480
+#      username: pump
+#      password: !YCnf%t3&cyZ0<4R?C/Gm~
+
+
+
+#      uri: mongodb://pump:!YCnf%t3%26cyZ0<4R%3FC/Gm~@ds011480-a0.ldb79.fleet.mlab.com:11480?ssl=true&replicaSet=rs-ds011480&readPreference=primaryPreferred
+#      authentication-database: parsedb
+#
+
+
+#      uri: mongodb://54.172.20.250:11480
+#      uri: mongodb://nonda:R^d[LFQ9H]K<Yy0q>@ds011480-a1.ldb79.fleet.mlab.com:11480,ds011480-a0.ldb79.fleet.mlab.com:11480/parse-app-dev?replicaSet=rs-ds011480&ssl=true
+
+#      host: 54.172.20.250
+#      port: 11480
+# host: ds011480-a1.ldb79.fleet.mlab.com
+
+
