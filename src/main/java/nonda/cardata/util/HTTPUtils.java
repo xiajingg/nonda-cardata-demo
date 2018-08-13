@@ -8,7 +8,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.message.BasicHttpResponse;
 /*
- *  合肥工业大学 管理学院 qianyang 1563178220@qq.com
+ *
  */
 public abstract class HTTPUtils {
 

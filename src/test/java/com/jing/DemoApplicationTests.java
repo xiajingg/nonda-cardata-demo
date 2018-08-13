@@ -3,6 +3,7 @@ package com.jing;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
+import hirondelle.date4j.DateTime;
 import javafx.scene.input.DataFormat;
 import nonda.cardata.DemoApplication;
 import nonda.cardata.controller.UUIDHelper;
@@ -11,6 +12,7 @@ import nonda.cardata.model.Tire;
 import nonda.cardata.model.User;
 import nonda.cardata.model.dao.IReportsDao;
 import nonda.cardata.service.IReportsService;
+import nonda.cardata.util.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -33,22 +36,15 @@ public class DemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
-//        Reports reports=new Reports();
-//        reports.setId(UUIDHelper.getUUID32());
-//        reports.setPostedDate("Jul 19, 2018 12:17:16 AM PDT");
-//        iReportsService.save(reports);
-        System.out.println(new Date("Jul 19, 2018 12:17:16 AM PDT"));
-        System.out.println("mRdy6LIQYNXcdwKKlLu5HdOlg".length());
-//        System.out.println(UUID.randomUUID().toString().length());
+        DateTime sdf=new DateTime("2018-08-13 12:59");
+        String endDate="2018-08-13 12:59";
+        System.out.println(sdf.getEndOfDay().format("YYYY-MM-DD hh:mm:ss"));
 	}
 
 
 	@Test
     public void users(){
-        User user =new User(UUIDHelper.getUUID32(),UUIDHelper.getUUID32(),0.00);
-
-        System.out.println(user.get_id());
-        System.out.println(user.getUsername());
+        System.out.println(FileUtils.deleteFile("workbook.xls"));
 
     }
 
