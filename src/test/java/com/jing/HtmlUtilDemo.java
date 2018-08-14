@@ -3,6 +3,7 @@ package com.jing;
 import com.gargoylesoftware.htmlunit.*;
 import com.gargoylesoftware.htmlunit.html.*;
 import com.gargoylesoftware.htmlunit.util.Cookie;
+import hirondelle.date4j.DateTime;
 import nonda.cardata.httputil.APIService;
 import nonda.cardata.httputil.HttpResult;
 import org.apache.commons.lang3.time.DateUtils;
@@ -33,9 +34,10 @@ public class HtmlUtilDemo {
 
     @Test
     public void a3(){
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         Calendar rightNow = Calendar.getInstance();
-        rightNow.add(Calendar.DATE, 0);
-        System.out.println(rightNow.getTimeInMillis());
+        rightNow.add(Calendar.DATE, -90);
+        System.out.println((rightNow.getTimeInMillis()-new Date().getTime())/60/60/24/1000);
 
         Date date=new Date();
         System.out.println(date.getTime());
