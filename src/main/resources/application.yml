@@ -3,7 +3,7 @@ server:
 girl:
   cupSize: B
 
-
+#这个就是把mysql配置完成了，  其他的什么都有默认最合适的配置 不用管， 除非有特别的想法， 就去加一下其他配置
 spring:
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
