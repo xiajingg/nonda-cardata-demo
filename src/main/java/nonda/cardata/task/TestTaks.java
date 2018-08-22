@@ -27,6 +27,6 @@ public class TestTaks {
 
     @Scheduled(cron = "30 * * * * ?")
     public void test3(){
-        System.out.println("10s一个"+new Date());
+        System.out.println("到30s一个"+new Date());
     }
 }

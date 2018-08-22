@@ -4,9 +4,9 @@ import com.gargoylesoftware.htmlunit.*;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.apache.commons.lang.StringUtils;
 import org.junit.Test;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -21,6 +21,7 @@ public class UrlController {
      * 获取图片
 
      */
+    @Transactional(propagation= Propagation.REQUIRED)
     @Test
     public void GetImage(){
         try {

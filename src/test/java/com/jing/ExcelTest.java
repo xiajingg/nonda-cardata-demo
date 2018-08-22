@@ -107,7 +107,7 @@ public class ExcelTest {
     public void testdate()throws Exception{
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 //        Date dt = sdf.parse("2018-07-17 04:03:20");
-//        Calendar rightNow = Calendar.getInstance();
+
 //        rightNow.setTime(dt);
 //        rightNow.add(Calendar.DATE, -1);
 //        rightNow.add(Calendar.DATE, -1);

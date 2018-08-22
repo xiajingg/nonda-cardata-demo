@@ -26,8 +26,8 @@ import java.util.Date;
 import java.util.UUID;
 
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = DemoApplication.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = DemoApplication.class)
 public class DemoApplicationTests {
 
     @Autowired
@@ -35,13 +35,17 @@ public class DemoApplicationTests {
 
 
 	@Test
-	public void contextLoads() {
-        DateTime sdf=new DateTime("2018-08-13 12:59");
-        String endDate="2018-08-13 12:59";
-        System.out.println(sdf.getEndOfDay().format("YYYY-MM-DD hh:mm:ss"));
+	public void contextLoads()throws Exception {
+        String newdateString="2018-08-13 23:59";
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+        Date newdate=sdf.parse(newdateString);
+        System.out.println((new Date().getTime()-newdate.getTime())/1000/60/60/24<90);
 	}
 
 
+    /**
+     * 删除文件
+     */
 	@Test
     public void users(){
         System.out.println(FileUtils.deleteFile("workbook.xls"));

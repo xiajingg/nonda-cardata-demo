@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8090
 girl:
   cupSize: B
 
@@ -19,10 +19,20 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
 
-#  data:
-#    mongodb:
-#     uri: mongodb://10.0.0.99:27017
-#     database: cardata
+
+  data:
+    mongodb:
+      primary:
+        database: cardata
+        port: 27017
+        host: 172.16.249.134
+      secondary:
+          database: parse-app-dev
+          username: xiajing
+          authentication-database: parse-app-dev
+          password: xj663812
+          port: 11480
+          host: ds011480-a0.ldb79.fleet.mlab.com
 
 
 
