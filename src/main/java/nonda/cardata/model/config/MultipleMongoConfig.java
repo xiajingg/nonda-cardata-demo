@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
+import org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper;
+import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
+import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,13 +28,20 @@ public class MultipleMongoConfig {
     @Primary
     @Bean(name = PrimaryMongoConfig.MONGO_TEMPLATE)
     public MongoTemplate primaryMongoTemplate() throws Exception {
-        return new MongoTemplate(primaryFactory(this.mongoProperties.getPrimary()));
+        //把DefaultMongoTypeMapper设置为null, 不然新增的时候 会多出一列_class, 值是model的路径
+        MappingMongoConverter converter =
+                new MappingMongoConverter(primaryFactory(this.mongoProperties.getPrimary()), new MongoMappingContext());
+        converter.setTypeMapper(new DefaultMongoTypeMapper(null));
+        return new MongoTemplate(primaryFactory(this.mongoProperties.getPrimary()),converter);
     }
 
     @Bean
     @Qualifier(SecondaryMongoConfig.MONGO_TEMPLATE)
     public MongoTemplate secondaryMongoTemplate() throws Exception {
-        return new MongoTemplate(secondaryFactory(this.mongoProperties.getSecondary()));
+        MappingMongoConverter converter =
+                new MappingMongoConverter(secondaryFactory(this.mongoProperties.getSecondary()), new MongoMappingContext());
+        converter.setTypeMapper(new DefaultMongoTypeMapper(null));
+        return new MongoTemplate(secondaryFactory(this.mongoProperties.getSecondary()),converter);
     }
 
     @Bean
