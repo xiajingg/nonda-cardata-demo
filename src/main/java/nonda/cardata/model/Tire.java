@@ -15,8 +15,8 @@ import java.util.Date;
  */
 @Component
 @Data
-@Entity
-@Table(name = "tire")
+//@Entity
+//@Table(name = "tire")
 public class Tire {
 
     @Id

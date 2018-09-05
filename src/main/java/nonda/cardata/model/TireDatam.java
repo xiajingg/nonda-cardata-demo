@@ -9,9 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Entity
-@Component
-@Table(name = "tire_data")
+//@Entity
+//@Component
+//@Table(name = "tire_data")
 public class TireDatam {
 
     @Id

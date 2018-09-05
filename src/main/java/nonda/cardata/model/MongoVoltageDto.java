@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Data
 @Document(collection = "VoltageFullData")
-public class MongoVoltageDto {
+public class MongoVoltageDto extends MongoPublicDto {
 
     @Id
     @Field(value = "_id")
@@ -18,12 +18,8 @@ public class MongoVoltageDto {
     private String pUser;
     @Field(value = "_p_vehicle")
     private String pVehicle;
-    @Field(value = "_created_at")
-    private Date createdAt;
-    @Field(value = "_updated_at")
-    private Date updatedAt;
     @Field(value = "time")
-    private long time;
+    private Long time;
     @Field(value = "data")
     private Object data;
 }

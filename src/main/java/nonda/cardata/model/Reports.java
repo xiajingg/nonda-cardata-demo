@@ -8,8 +8,8 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Data
-@Entity
-@Table(name = "reports")
+//@Entity
+//@Table(name = "reports")
 public class Reports {
 
     @Id

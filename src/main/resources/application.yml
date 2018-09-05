@@ -3,13 +3,15 @@ server:
 girl:
   cupSize: B
 
+
 #这个就是把mysql配置完成了，  其他的什么都有默认最合适的配置 不用管， 除非有特别的想法， 就去加一下其他配置
 spring:
   datasource:
+    primary:
       driver-class-name: com.mysql.jdbc.Driver
       username: root
       password: xj663812
-      url: jdbc:mysql://localhost:3306/cardata_collector?characterEncoding=utf-8&useSSL=false
+      url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf-8&useSSL=false
 
   jpa:
     hibernate:
@@ -25,39 +27,23 @@ spring:
       primary:
         database: cardata
         port: 27017
-        host: 172.16.249.134
+        host:
       secondary:
           database: parse-app-dev
           username: xiajing
           authentication-database: parse-app-dev
           password: xj663812
           port: 11480
-          host: ds011480-a0.ldb79.fleet.mlab.com
+          host:
 
 
 
+  redis:
+    host: 192.168.1.9
+    port: 6379
+    password:
 
-
-#      uri: mongodb://ds011480-a0.ldb79.fleet.mlab.com:11480
-#      database: parse-app-dev
-#      authentication-database: admin
-#      host: 10.0.0.99
-#      port: 11480
-#      username: pump
-#      password: !YCnf%t3&cyZ0<4R?C/Gm~
-
-
-
-#      uri: mongodb://pump:!YCnf%t3%26cyZ0<4R%3FC/Gm~@ds011480-a0.ldb79.fleet.mlab.com:11480?ssl=true&replicaSet=rs-ds011480&readPreference=primaryPreferred
-#      authentication-database: parsedb
-#
-
-
-#      uri: mongodb://54.172.20.250:11480
-#      uri: mongodb://nonda:R^d[LFQ9H]K<Yy0q>@ds011480-a1.ldb79.fleet.mlab.com:11480,ds011480-a0.ldb79.fleet.mlab.com:11480/parse-app-dev?replicaSet=rs-ds011480&ssl=true
-
-#      host: 54.172.20.250
-#      port: 11480
-# host: ds011480-a1.ldb79.fleet.mlab.com
+logging:
+  config: classpath:log4j2.xml
 
 

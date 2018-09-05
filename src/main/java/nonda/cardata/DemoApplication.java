@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 //@ComponentScan("nonda.cardata")
 //扫描包
-@SpringBootApplication(scanBasePackages = "nonda.cardata",exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = "nonda.cardata")
 //开启定时器功能
 @EnableScheduling
 public class DemoApplication {

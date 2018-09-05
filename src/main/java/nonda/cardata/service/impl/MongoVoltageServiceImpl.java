@@ -5,6 +5,7 @@ import nonda.cardata.model.dao.primary.IMongoVoltagePrimaryDao;
 import nonda.cardata.model.dao.secondary.IMongoVoltageSecondaryDao;
 import nonda.cardata.service.IMongoVoltageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MongoVoltageServiceImpl implements IMongoVoltageService {
@@ -39,5 +41,13 @@ public class MongoVoltageServiceImpl implements IMongoVoltageService {
     public Page<MongoVoltageDto> findSecondaryAll(int page, int rows) {
         PageRequest pageRequest = new PageRequest(page-1,rows, new Sort(Sort.Direction.DESC,"updatedAt"));
         return iMongoVoltageSecondaryDao.findAll(pageRequest);
+    }
+
+    @Override
+    public Optional<MongoVoltageDto> findFirstByPUser(String pUser) {
+        MongoVoltageDto mongoVoltageDto = new MongoVoltageDto();
+        mongoVoltageDto.setPVehicle(pUser);
+        Example<MongoVoltageDto> example = Example.of(mongoVoltageDto);
+        return iMongoVoltagePrimaryDao.findOne(example);
     }
 }

@@ -1,7 +1,7 @@
 package com.jing;
 
 
-import org.apache.commons.httpclient.params.HttpMethodParams;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.client.CookieStore;
 import org.apache.http.client.config.CookieSpecs;

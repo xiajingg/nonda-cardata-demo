@@ -3,7 +3,6 @@ package com.jing;
 import com.gargoylesoftware.htmlunit.*;
 import com.gargoylesoftware.htmlunit.html.*;
 import com.gargoylesoftware.htmlunit.util.Cookie;
-import hirondelle.date4j.DateTime;
 import nonda.cardata.httputil.APIService;
 import nonda.cardata.httputil.HttpResult;
 import org.apache.commons.lang3.time.DateUtils;
@@ -20,7 +19,7 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
-import org.apache.log4j.helpers.ISO8601DateFormat;
+//import org.apache.log4j.helpers.ISO8601DateFormat;
 import org.apache.poi.util.IOUtils;
 import org.junit.Test;
 
@@ -33,12 +32,12 @@ import java.util.regex.Pattern;
 
 public class HtmlUtilDemo {
 
-    @Test
-    public void a4(){
-        SimpleDateFormat sdf=new SimpleDateFormat("YYYY-MM-DDTHH:mm:ss.mmm");
-        ISO8601DateFormat.getDateInstance();
-        System.out.println(sdf.format(new Date()));
-    }
+//    @Test
+//    public void a4(){
+//        SimpleDateFormat sdf=new SimpleDateFormat("YYYY-MM-DDTHH:mm:ss.mmm");
+//        ISO8601DateFormat.getDateInstance();
+//        System.out.println(sdf.format(new Date()));
+//    }
 
     @Test
     public void a3(){

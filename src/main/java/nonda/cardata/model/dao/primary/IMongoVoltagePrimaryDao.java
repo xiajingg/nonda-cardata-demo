@@ -11,4 +11,6 @@ public interface IMongoVoltagePrimaryDao extends MongoRepository<MongoVoltageDto
 
     //根据创建时间查询
     List<MongoVoltageDto> findByUpdatedAtBetween(Date start, Date end);
+
+    List<MongoVoltageDto> findFirstByPUser(String pUser);
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 173.2 200" style="enable-background:new 0 0 173.2 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.1;fill:#231815;}
+	.st2{opacity:0.3;fill:#231815;}
+</style>
+<g>
+	<g>
+		<radialGradient id="SVGID_1_" cx="30.9432" cy="59.0813" r="158.2935" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#2CA6E0"/>
+			<stop  offset="0.4788" style="stop-color:#00A199"/>
+			<stop  offset="1" style="stop-color:#5F1985"/>
+		</radialGradient>
+		<path class="st0" d="M129.9,25H43.3L0,100l43.3,75h86.6l43.3-75L129.9,25z M68.7,131.1h42.5c6.3,0,11.4,5.1,11.4,11.4
+			c0,6.3-5.1,11.4-11.4,11.4H62.1c-4.1,0-7.8-2.2-9.9-5.7l-24.5-42.5c-2-3.5-2-7.9,0-11.4l24.5-42.5c2-3.5,5.8-5.7,9.9-5.7h49.1
+			c6.3,0,11.4,5.1,11.4,11.4c0,6.3-5.1,11.4-11.4,11.4H68.7L50.7,100L68.7,131.1z"/>
+	</g>
+	<g>
+		<polygon class="st1" points="50.7,100 86.6,100 104.5,68.9 68.7,68.9 		"/>
+		<path class="st1" d="M27.7,94.3l24.5-42.5c2-3.5,5.8-5.7,9.9-5.7h49.1c2.1,0,4,0.6,5.7,1.6L129.9,25H43.3L0,100h26.1
+			C26.1,98,26.7,96.1,27.7,94.3z"/>
+		<path class="st2" d="M111.1,153.9H62.1c-4.1,0-7.8-2.2-9.9-5.7l-24.5-42.5c-1-1.8-1.5-3.7-1.5-5.7H0l43.3,75h86.6l-13.1-22.7
+			C115.1,153.3,113.2,153.9,111.1,153.9z"/>
+		<polygon class="st2" points="50.7,100 68.7,131.1 104.5,131.1 86.6,100 50.7,100 		"/>
+	</g>
+</g>
+</svg>

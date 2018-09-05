@@ -1,62 +1,57 @@
-//package nonda.cardata.controller;
-//
-//
-//import net.sf.json.JSONException;
-//import net.sf.json.JSONObject;
-//import nonda.cardata.model.*;
+package nonda.cardata.controller;
+
+
+import nonda.cardata.model.*;
 //import nonda.cardata.service.ICarDataMongoService;
-//import nonda.cardata.service.ITireDatamService;
-//import nonda.cardata.service.ITireService;
-//import nonda.cardata.service.impl.MongoUserServiceImpl;
-//import nonda.cardata.service.impl.UserServiceImpl;
-//import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-//import org.apache.poi.hssf.usermodel.HSSFRow;
-//import org.apache.poi.hssf.usermodel.HSSFSheet;
-//import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-//import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-//import org.apache.poi.ss.usermodel.Cell;
-//import org.apache.poi.ss.usermodel.Row;
-//import org.apache.poi.ss.usermodel.Sheet;
-//import org.apache.poi.ss.usermodel.Workbook;
-//import org.apache.poi.ss.util.WorkbookUtil;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.data.domain.Page;
-//import org.springframework.validation.BindingResult;
-//import org.springframework.web.bind.annotation.*;
-//import org.springframework.web.multipart.MultipartFile;
-//import org.springframework.web.servlet.ModelAndView;
-//
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
-//import javax.transaction.Transactional;
-//import javax.validation.Valid;
-//import java.io.*;
-//import java.text.SimpleDateFormat;
-//import java.util.*;
-//
-///**
-// * Created by xiajing on 2018/5/15.
-// *
-// */
-//
-////给整个类指定一个url
-//@RequestMapping("/user/")
-//@RestController
-//public class UserController {
-//
-//    @Autowired
-//    private UserServiceImpl userService;
-//    @Autowired
-//    private MongoUserServiceImpl mongoUserService;
-//
+import nonda.cardata.service.ITireDatamService;
+import nonda.cardata.service.ITireService;
+import nonda.cardata.service.impl.UserServiceImpl;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.util.WorkbookUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.transaction.Transactional;
+import javax.validation.Valid;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+/**
+ * Created by xiajing on 2018/5/15.
+ *
+ */
+
+//给整个类指定一个url
+@RequestMapping("/user/")
+@RestController
+public class UserController {
+
+    @Autowired
+    private UserServiceImpl userService;
+
 //    @Autowired
 //    private ICarDataMongoService iCarDataMongoService;
-//
+
 //    @Autowired
 //    private ITireService iTireService;
 //    @Autowired
 //    private ITireDatamService iTireDatamService;
-//
+
 //    @GetMapping(value = "fd")
 //    public ModelAndView fd(){
 //
@@ -393,5 +388,5 @@
 //        }
 //
 //    }
-//
-//}
+
+}

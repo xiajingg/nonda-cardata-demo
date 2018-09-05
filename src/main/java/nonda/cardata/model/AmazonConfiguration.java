@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Entity
-@Table(name = "amazon_configuration")
+//@Entity
+//@Table(name = "amazon_configuration")
 public class AmazonConfiguration {
 
     @Id

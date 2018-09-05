@@ -8,10 +8,11 @@ import java.util.List;
  * Created by xiajing on 2018/5/15.
  */
 public interface IUserService {
+
      List<User> findAll();
 
-//     User getOne(Integer id);
+     List<User> findByUsernameAndPassword(String username,String password);
 
-     User createUser(User user);
+     User save(User user);
 
 }

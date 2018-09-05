@@ -12,21 +12,32 @@ public class TestTaks {
 
 
 
-    @Scheduled(cron = "1 * 9 * * ?")
-    public void test1(){
-        System.out.println("1秒一个的"+new Date());
-    }
+//    @Scheduled(cron = "1 * 9 * * ?")
+//    public void test1(){
+//        System.out.println("1秒一个的"+new Date());
+//    }
+//
+//
+//
+//    @Scheduled(cron = "5 * 9 * * ?")
+//    public void test2(){
+//        System.out.println("5秒一个"+new Date());
+//    }
 
 
-
-    @Scheduled(cron = "5 * 9 * * ?")
-    public void test2(){
-        System.out.println("5秒一个"+new Date());
-    }
-
-
-    @Scheduled(cron = "30 * * * * ?")
+//    @Scheduled(cron = "0 * * * * ?")
     public void test3(){
-        System.out.println("到30s一个"+new Date());
+        new Thread(new Runnable() {
+            public void run() {
+                for (int i=0;i<=1000;i++){
+                    try {
+                        System.out.println(i);
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
     }
 }

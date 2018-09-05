@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public interface IMongoVoltageService {
 
@@ -13,4 +14,6 @@ public interface IMongoVoltageService {
     Page<MongoVoltageDto> findPrimaryAll(int page, int rows);
 
     Page<MongoVoltageDto> findSecondaryAll(int page, int rows);
+
+    Optional<MongoVoltageDto> findFirstByPUser(String pUser);
 }

@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
@@ -45,6 +46,12 @@ public class MongoTest {
         for (MongoVoltageDto vo:mongoVoltageDtos){
             System.out.println(vo.getId()+":"+vo.getPUser()+":"+vo.getPVehicle()+":"+vo.getData()+":"+vo.getUpdatedAt()+"==>"+vo.getCreatedAt());
         }
+    }
+
+    @Test
+    public void a1(){
+        Optional<MongoVoltageDto> mongoVoltageDtos=iMongoVoltageService.findFirstByPUser("Vehicle$dHNpABaJwF");
+        System.out.println(mongoVoltageDtos.get().getId());
     }
 }
 
